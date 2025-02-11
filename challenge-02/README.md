@@ -76,12 +76,29 @@ Crie uma função com as seguintes características:
 function three(a,b,c) {
 ... if ( b === undefined && c === undefined ) {
 ... return a;
-...} if ( c === undefined) {
+...} else if ( c === undefined) {
 ... return a + b;
 ...} else {
 ... return (a + b) / c;
+...} else if ( a === undefined && b === undefined && c === undefined) {
+... return false;
+...}
+
+// Correção parcial (depois de "else", não pode vir "else if"), o restante deu certo:
+function three(a,b,c) {
+... if ( a !== undefined && b === undefined && c === undefined ) {
+... return a;
+...} else if ( a !== undefined && b !== undefined && c === undefined) {
+... return a + b;
+...} else if ( a !== undefined && b !== undefined && c !== undefined) {
+... return (a + b) / c;
+...} else if ( a === undefined && b === undefined && c === undefined) {
+... return false;
+...} else {
+... return null;
 ...}
 ...}
+
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 three (3); // 3
