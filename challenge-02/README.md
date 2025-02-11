@@ -34,7 +34,7 @@ function valor() {
 valor();
 
 // Qual o retorno da função? (Use comentários de bloco).
-/* 'O valor da variável agora é VALOR. Onde VALOR é o novo valor da variável.'*/
+/* 'O valor da variável agora é VALOR'*/
 
 /*
 Crie uma função com as seguintes características:
@@ -43,9 +43,15 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
+/* Correção:
 function carac(a,b,c) {
-... if 
-
+... if ( a === undefined || b === undefined || c === undefined ) {
+... return ' Preencha todos os valores corretamente! '
+...} else (
+... return (a * b * c) + 2;
+...}
+...}
+*/
 // Invoque a função criada acima, passando só dois números como argumento.
 ?
 
