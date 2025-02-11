@@ -24,6 +24,11 @@ Onde VALOR é o novo valor da variável.
 function valor() {
 ... var op = ' O valor da variável agora é VALOR. Onde VALOR é o novo valor da variável.'
 ... return op;}
+/*Correção: function valor() {
+... var op = 'VALOR';
+... return ' O valor da variável agora é ' + op;
+}
+*/
 
 // Invoque a função criada acima.
 valor();
