@@ -178,7 +178,27 @@ pessoa.apresentacao = function() {
  if ( pessoa.idade >= 2 && pessoa.caminhouQuantosMetros >= 2 )
  return 'Olá, eu sou o ' + pessoa.nomeCompleto ', tenho ' + pessoa.idade + ' anos' + ', ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metros!';
  }
- 
+
+/*Correção:
+
+pessoa.apresentacao = function() {
+  var fem = 'o';
+  var ano = 'anos';
+  var met = 'metros';
+
+  if ( pessoa.sexo === 'feminino' ) {
+  fem = 'a';
+  }
+  if ( pessoa.idade === 1 ) {
+  ano = 'ano';
+  }
+  if ( pessoa.caminhouQuantosMetros === 1 ) {
+  met = 'metro';
+  }
+
+  return 'Olá, eu sou ' + fem + ' ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' ' + ano + ', ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' ' + met + '!';
+}
+*/
 
 
 // Agora, apresente-se ;)
