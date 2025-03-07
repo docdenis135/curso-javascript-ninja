@@ -13,9 +13,13 @@ var isTruthy = function(p) {
  return true;}
  return false;
  };
-//Outro métodp NINJA:
+//Outro método NINJA:
 var isTruthy = function(p) {
  return p ? true : false;
+ };
+//Outro método muito NINJA:
+var isTruthy = function(p) {
+ return !!p;
  };
 // Não se faz necessário o comando "else", pois o comando pararia no 1º "return" caso o parâmetro seja preenchido (é ignorado qualquer comando que venha após a confirmação)
 
