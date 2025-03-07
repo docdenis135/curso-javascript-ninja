@@ -45,35 +45,45 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-?
+var carro = { marca: 'chevrolet' , modelo: 'opala' , placa: 'KOU7175' , ano: 1978 , cor: 'preto' , quantasPortas: 2 , assentos: 5 , quantidadePessoas: 0 };
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-?
+carro.mudarCor = function(m) {
+ carro.cor = m;
+ };
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-?
+carro.obterCor = function() {
+ return carro.cor;
+ };
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-?
+carro.obterModelo = function() {
+ return carro.modelo;
+ };
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-?
+carro.obterMarca = function() {
+ return carro.marca:
+ };
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-?
+carro.obterMarcaModelo = function() {
+ return 'Esse carro é um ' + carro.marca + ' ' + carro.modelo + '.';
+ };
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
@@ -91,7 +101,22 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+carro.adicionarPessoas = function(x) {
+ carro.quantidadePessoas = carro.quantidadePessoas + x ;
+ var pes = 'pessoa';
+ if ( cabem >= 2 ) {
+ pes = 'pessoas';
+ var cabem = carro.assento - (carro.quantidadePessoas - x);
+  if ( carro.quantidadePessoas < carro.assento ) {
+ return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
+ } if ( carro.quantidadePessoas === carro.assento ) {
+ return 'O carro já está lotado!';
+ } if ( carro.quantidadePessoas > carro.assento ) {
+ carro.quantidadePessoas = carro.quantidadePessoas - x;
+ return 'Só cabem mais ' + cabem + pes + '!';
+ };
+ };
+
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -101,38 +126,38 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.cor; //'branco'
 
 // Mude a cor do carro para vermelho.
-?
+carro.mudarCor(vermelho);
 
 // E agora, qual a cor do carro?
-?
+'vermelho'
 
 // Mude a cor do carro para verde musgo.
-?
+carro.mudarCor(verde musgo);
 
 // E agora, qual a cor do carro?
-?
+'verde musgo'
 
 // Qual a marca e modelo do carro?
-?
+'Esse carro é um chevrolet opala'
 
 // Adicione 2 pessoas no carro.
-?
+carro.adicionarPessoas(2);
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.adicionarPessoas(4);
 
 // Faça o carro encher.
-?
+carro.adicionarPessoas(3);
 
 // Tire 4 pessoas do carro.
-?
+carro.adicionarPessoas(-4);
 
 // Adicione 10 pessoas no carro.
-?
+carro.adicionarPessoas(10);
 
 // Quantas pessoas temos no carro?
-?
+Uma pessoa
 ```
