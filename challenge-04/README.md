@@ -24,7 +24,11 @@ var isTruthy = function(p) {
 // Não se faz necessário o comando "else", pois o comando pararia no 1º "return" caso o parâmetro seja preenchido (é ignorado qualquer comando que venha após a confirmação)
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
-isTruthy();
+isTruthy(false);
+isTruthy(null);
+isTruthy(undefined);
+isTruthy(0);
+isTruthy(NaN);
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
