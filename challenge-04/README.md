@@ -114,21 +114,22 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 citado acima, no lugar de "pessoas".
 */
 carro.adicionarPessoas = function(x) {
- carro.quantidadePessoas = carro.quantidadePessoas + x ;
+ var totalPessoas = carro.quantidadePessoas + x ;
+ if ( carro.quantidadePessoas === carro.assentos ) {
+  return 'O carro já está lotado!';
+}
  var pes = 'pessoa';
- var cabem = carro.assento - (carro.quantidadePessoas - x);
-  if ( cabem >= 2 ) {
-   pes = 'pessoas';
- } if ( carro.quantidadePessoas < carro.assento ) {
-   return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
- } if ( carro.quantidadePessoas === carro.assento ) {
-    return 'O carro já está lotado!';
- } if ( carro.quantidadePessoas > carro.assento ) {
-    carro.quantidadePessoas = carro.quantidadePessoas - x;
-    return 'Só cabem mais ' + cabem + pes + '!';
- };
- };
- }; 
+ var cabem = carro.assentos - carro.quantidadePessoas;
+ if ( cabem >= 2) {
+  pes = 'pessoas'; // Ninja: var pluralOuSingular = cabem === 1 ? ' pessoa' : ' pessoas';
+ }
+ if ( totalPessoas > carro.assentos ) {
+  return 'Só cabem mais ' + cabem + ' ' + pes + '!';
+}
+carro.quantidadePessoas += x;
+ return 'Já temos ' + totalPessoas + ' pessoas no carro!';
+};
+
 
 
 /*
