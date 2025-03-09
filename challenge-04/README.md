@@ -115,9 +115,9 @@ citado acima, no lugar de "pessoas".
 */
 carro.adicionarPessoas = function(x) {
  var totalPessoas = carro.quantidadePessoas + x ;
- if ( carro.quantidadePessoas === carro.assentos ) {
+ if ( carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos ) {
   return 'O carro já está lotado!';
-}
+} // "totalPessoas >= carro.assentos" é para conseguir remover pessoas do carro, se não o "if" sempre será validado quando tiverem 5 pessoas no carro.
  var pes = 'pessoa';
  var cabem = carro.assentos - carro.quantidadePessoas;
  if ( cabem >= 2) {
