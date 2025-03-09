@@ -129,7 +129,7 @@ carro.adicionarPessoas = function(x) {
 carro.quantidadePessoas += x;
  return 'Já temos ' + totalPessoas + ' pessoas no carro!';
 };
-
+// Dica: após terminar o código sempre dê os toques finais para arrumar o código, como por exemplo: colocar as variáveis no início do código.
 
 
 /*
