@@ -116,18 +116,19 @@ citado acima, no lugar de "pessoas".
 carro.adicionarPessoas = function(x) {
  carro.quantidadePessoas = carro.quantidadePessoas + x ;
  var pes = 'pessoa';
- if ( cabem >= 2 ) {
- pes = 'pessoas';
  var cabem = carro.assento - (carro.quantidadePessoas - x);
-  if ( carro.quantidadePessoas < carro.assento ) {
- return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
+  if ( cabem >= 2 ) {
+   pes = 'pessoas';
+ } if ( carro.quantidadePessoas < carro.assento ) {
+   return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
  } if ( carro.quantidadePessoas === carro.assento ) {
- return 'O carro já está lotado!';
+    return 'O carro já está lotado!';
  } if ( carro.quantidadePessoas > carro.assento ) {
- carro.quantidadePessoas = carro.quantidadePessoas - x;
- return 'Só cabem mais ' + cabem + pes + '!';
+    carro.quantidadePessoas = carro.quantidadePessoas - x;
+    return 'Só cabem mais ' + cabem + pes + '!';
  };
  };
+ }; 
 
 
 /*
