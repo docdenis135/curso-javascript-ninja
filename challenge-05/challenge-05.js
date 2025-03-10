@@ -74,18 +74,19 @@ Ainda com a função acima, imprima a quantidade de páginas de um livro qualque
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-'O livro Julgamento tem ' + book('Julgamento').quantidadePaginas + ' páginas!';
+var bookName = 'Julgamento';
+'O livro ' + bookName + ' tem ' + book( bookName ).quantidadePaginas + ' páginas!';
 //Correção: A propriedade é chamada fora dos 'parênteses'.
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-// ?
+'O autor do livro ' + bookName + ' é ' + book( bookName ).autor + '.';
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-// ?
+'O livro ' + bookName + ' foi publicado pela editora ' + book( bookName ).editora + '.';
