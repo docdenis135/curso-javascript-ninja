@@ -42,9 +42,8 @@ function showTeamPosition(x) {
   var pos = teams[x - 1];
   if (x > 5) {
     return 'Não temos informação do time que está nessa posição.';
-  } else {
+  } 
   return ' O time que está em ' + x + 'º lugar é o ' + pos;
-}
 }
 
 /*
