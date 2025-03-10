@@ -57,6 +57,8 @@ function book(nome) {
     'Julgamento': { quantidadePaginas: 97 , autor: 'Erick C.' , editora: 'Police' },
     'Pequeno': { quantidadePaginas: 19 , autor: 'Jubileu' , editora: 'Fox' }
              };
+  //NINJA:
+  //return !nome ? prop : prop[ nome ];
   if ( !nome ) {
     return prop;
   }
@@ -65,15 +67,15 @@ function book(nome) {
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-// ?
+book();
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-// ?
-
+'O livro Julgamento tem ' + book('Julgamento').quantidadePaginas + ' páginas!';
+//Correção: A propriedade é chamada fora dos 'parênteses'.
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
