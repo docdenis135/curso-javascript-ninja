@@ -53,11 +53,14 @@ os livros.
 */
 function book(nome) {
   var prop = { 
-    Matança: { quantidadePaginas: 168 , autor: 'Jessedy P.' , editora: 'Rumons' },
-    Julgamento: { quantidadePaginas: 97 , autor: 'Erick C.' , editora: 'Police' },
-    Pequeno: { quantidadePaginas: 19 , autor: 'Jubileu' , editora: 'Fox' }
+    'Matança': { quantidadePaginas: 168 , autor: 'Jessedy P.' , editora: 'Rumons' },
+    'Julgamento': { quantidadePaginas: 97 , autor: 'Erick C.' , editora: 'Police' },
+    'Pequeno': { quantidadePaginas: 19 , autor: 'Jubileu' , editora: 'Fox' }
              };
-  return prop.nome;
+  if ( !nome ) {
+    return prop;
+  }
+  return prop[nome];
 };
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
